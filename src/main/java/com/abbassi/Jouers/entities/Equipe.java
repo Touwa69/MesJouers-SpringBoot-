@@ -24,5 +24,4 @@ public class Equipe {
     @OneToMany(mappedBy = "equipe")
     private List<Jouer> jouers ;
 
-
 }
