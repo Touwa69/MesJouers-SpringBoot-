@@ -1,5 +1,6 @@
 package com.abbassi.Jouers;
 
+import com.abbassi.Jouers.entities.Equipe;
 import com.abbassi.Jouers.entities.Jouer;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class JouersApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		repositoryRestConfiguration.exposeIdsFor(Jouer.class);
+		repositoryRestConfiguration.exposeIdsFor(Jouer.class,Equipe.class);
 	}
 
 	@Bean

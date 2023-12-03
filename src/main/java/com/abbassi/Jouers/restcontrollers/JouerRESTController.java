@@ -49,4 +49,9 @@ public class JouerRESTController {
     public List<Jouer> getJouersByEquipeId(@PathVariable("idEquipe") Long idEquipe) {
         return jouerService.findByEquipeIdEquipe(idEquipe);
     }
+
+    @RequestMapping(value="/jouers ByName/{nom}",method = RequestMethod.GET)
+    public List<Jouer> findByNomJouerContains(@PathVariable("nom") String nom) {
+        return jouerService.findByNomJouerContains(nom);
+    }
 }
